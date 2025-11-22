@@ -33,7 +33,18 @@ The protected library. Titles placed here remain available at all times. This di
 The active catalog. The script populates this directory using symbolic links pointing to the real files inside `/mnt/movies`. Linking avoids file loss, disc thrashing, and long transfer times. The rotation directory feels like a curated shelf that changes with each run.
 
 ---
+## Library Size Qualifier
 
+This rotation system was designed for a collection far larger than what most people maintain. The archive contains **6731** movie entries inside `/mnt/movies`, with **386** titles held permanently inside `/mnt/core_movies`. The underlying storage spans multiple network volumes, with the movies directory alone occupying a share of a **104 terabyte** pool on a Synology NAS. This scale shapes the design choices in several ways.
+
+1. A library of this size cannot be browsed meaningfully in a single session. The archive is too large to process visually, so new additions disappear into the mass unless surfaced deliberately.  
+2. Traditional metadata based recommender logic is not enough at this scale, since personal taste changes over time and many titles were added years apart. A rotation system allows real novelty without relying on external scoring.  
+3. The disk footprint and network structure make file movement expensive and risky. Symbolic linking avoids unnecessary strain on the NAS volumes, avoids file relocation errors, and prevents accidental loss.  
+4. The size of the core library holds practical weight. With nearly four hundred permanent favorites, the rotating set must remain several times larger to avoid feeling repetitive. The active shelf must provide meaningful contrast to the core set.
+
+The design targets a rotation size of about one thousand entries because that ratio keeps the experience stable and fresh. It provides enough variety to explore but not so much that the rotation becomes another overwhelming archive. The rotation system is built around these constraints so the library remains usable at a scale where most tools would break down into noise.
+
+---
 ## Why a Rotation System Matters
 
 Psychological research shows that people respond best to environments that shift gently over time. Three findings matter here.
