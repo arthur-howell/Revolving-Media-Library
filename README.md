@@ -2,6 +2,21 @@
 A structured method for keeping a large media archive fresh through controlled rotation, symbolic linking, and stable separation of core and non core titles.
 
 ---
+## Table of Contents
+
+1. [Purpose](#purpose)  
+2. [Directory Structure](#directory-structure)  
+3. [Library Size Qualifier](#library-size-qualifier)  
+4. [Why a Rotation System Matters](#why-a-rotation-system-matters)  
+5. [Mission of the Script](#mission-of-the-script)  
+6. [Why the Size Ratios Matter](#why-the-size-ratios-matter)  
+7. [Installation](#installation)  
+8. [Safety Considerations](#safety-considerations)  
+9. [Performance Notes](#performance-notes)  
+10. [Extending the System](#extending-the-system)  
+11. [Final Note](#final-note)
+
+---
 
 ## Purpose
 
